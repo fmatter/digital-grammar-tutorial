@@ -38,12 +38,15 @@ First, install the python packages needed for the next two steps:
 * `pip install -r requirements.txt` (`make install`)
 
 ### Create a CLDF version of your corpus
+Next, use `cldflex` to transform the contents of your `.flextext` and `.lift` files to a CLDF dataset:
 * `cldflex flex2csv texts.flextext --lexicon lexicon.lift --cldf` (`make cldflex`) [^1]
 
+Note that you can also create a CLDF dataset in some other way, e.g. by using [`cldfbench`](https://cldfbench.readthedocs.io), or you can work with an existing dataset.
+
 ### Create a pylingdocs project based on that CLDF dataset
-1. create a pylingdocs project (`pylingdocs new`, Makefile assumes something ending in "grammar")
+1. create a pylingdocs project (`pylingdocs new`, note that the Makefile assumes something ending in `grammar`)
 2. (optional) write stuff! ([how to use pylingdocs](https://pylingdocs.readthedocs.io/en/latest/usage.html#quick-start))
-3. create another CLDF dataset combining data and description (`pylingdocs cldf`)
+3. create another CLDF dataset combining data and description by running `pylingdocs cldf` in your new project (`make pylingdocs`)
 
 ### Set up a CLLD app
 1. fork, clone or download [https://github.com/fmatter/indicogram/](https://github.com/fmatter/indicogram/) into this folder (`make indicogram` -- this also takes care of the next step)
