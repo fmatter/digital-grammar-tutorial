@@ -2,11 +2,11 @@
 
 The goal of this tutorial is to document a workflow that starts with a glossed corpus in [FLEx](https://software.sil.org/fieldworks/) and ends at a web app serving an interactive digital grammar.
 
-* lnowledge prerequisites: command line literacy ([this tutorial](https://github.com/dictionaria/pydictionaria/blob/master/docs/intro-commandline.md) by Johannes Englisch may help)
+* knowledge prerequisites: command line literacy ([this tutorial](https://github.com/dictionaria/pydictionaria/blob/master/docs/intro-commandline.md) by Johannes Englisch may help)
 * software prerequisites:
     * a working [python](https://www.python.org/) 3.7+ installation
     * [git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
-    * optional (if you want to compile other output formats, too): [Pandoc](https://pandoc.org/installing.html)
+    * optional: [Pandoc](https://pandoc.org/installing.html) (for other output formats)
 * something not working?
     * Please check first if your case is covered in [common problems](#common-problems)
     * if not: [open an issue](https://github.com/fmatter/flex-grammar-tutorial/issues)
