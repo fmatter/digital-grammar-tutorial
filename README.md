@@ -2,11 +2,12 @@
 
 The goal of this tutorial is to document a workflow that starts with a glossed corpus in [FLEx](https://software.sil.org/fieldworks/) and ends at a web app serving an interactive digital grammar.
 
-* Knowledge prerequisites: command line literacy ([this tutorial](https://github.com/dictionaria/pydictionaria/blob/master/docs/intro-commandline.md) by Johannes Englisch may help)
-* Software prerequisites:
+* lnowledge prerequisites: command line literacy ([this tutorial](https://github.com/dictionaria/pydictionaria/blob/master/docs/intro-commandline.md) by Johannes Englisch may help)
+* software prerequisites:
     * a working [python](https://www.python.org/) 3.7+ installation
     * [git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
     * optional (if you want to compile other output formats, too): [Pandoc](https://pandoc.org/installing.html)
+* something not working? Please check first if your case is covered in [common problems](#common-problems); if not: [open an issue](issues)
 
 Breakdown of the workflow:
 1. convert FLEx exports to CLDF corpus dataset with `cldflex`
@@ -21,6 +22,7 @@ Breakdown of the workflow:
 **If you just want to see the demo, right now**: `make`
 
 ### Setting up for the project
+First, install the python packages needed for the next two steps
 * Install the requirements: `pip install -r requirements.txt` (`make install`)
 
 ### Creating the CLDF dataset
@@ -33,7 +35,8 @@ Breakdown of the workflow:
 2. `pylingdocs cldf`
 
 ### Set up a CLLD app
-1. fork, clone or download [https://github.com/fmatter/indicogram/](https://github.com/fmatter/indicogram/) into this folder (`make indicogram`)
+1. fork, clone or download [https://github.com/fmatter/indicogram/](https://github.com/fmatter/indicogram/) into this folder (`make indicogram` -- this also takes care of the next step)
+2. `pip install -e /indicogram` (`make indicogram` already took care of this)
 2. build the `clld` database and serve it (`make clld`)
 
 ## FAQ
