@@ -5,28 +5,28 @@ LIFT = $(shell find flex/*lift -maxdepth 0 )
 .PHONY: indicogram
 
 all:
-    make setup
-    make build
+	make setup
+	make build
 
 setup: install cldflex indicogram
-    pylingdocs new
-    
+	pylingdocs new
+	
 build:
-    make pylingdocs
-    make clld
+	make pylingdocs
+	make clld
 
 install:
-    pip3 install -r requirements.txt
+	pip3 install -r requirements.txt
 
 cldflex:
-    cldflex flex2csv $(FLEXTEXT) --lexicon $(LIFT) --cldf
+	cldflex flex2csv $(FLEXTEXT) --lexicon $(LIFT) --cldf
 
 indicogram:
-    git clone https://github.com/fmatter/indicogram/
-    cd indicogram; pip install -e .
+	git clone https://github.com/fmatter/indicogram/
+	cd indicogram; pip install -e .
 
 pylingdocs:
-    cd $(CLLD_GRAMMAR); pylingdocs cldf
+	cd $(CLLD_GRAMMAR); pylingdocs cldf
 
 clld:
-    cd indicogram; clld initdb development.ini --cldf ../$(CLLD_GRAMMAR)/output/cldf/metadata.json; pserve --reload development.ini
+	cd indicogram; clld initdb development.ini --cldf ../$(CLLD_GRAMMAR)/output/cldf/metadata.json; pserve --reload development.ini

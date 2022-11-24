@@ -7,7 +7,9 @@ The goal of this tutorial is to document a workflow that starts with a glossed c
     * a working [python](https://www.python.org/) 3.7+ installation
     * [git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
     * optional: [Pandoc](https://pandoc.org/installing.html) (for other output formats)
-* something not working?
+
+
+** Running into problems? **
     * please check first if your case is covered in [common problems](#common-problems)
     * if not: [open an issue](https://github.com/fmatter/flex-grammar-tutorial/issues)
 
