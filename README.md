@@ -7,11 +7,13 @@ The goal of this tutorial is to document a workflow that starts with a glossed c
     * a working [python](https://www.python.org/) 3.7+ installation
     * [git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
     * optional (if you want to compile other output formats, too): [Pandoc](https://pandoc.org/installing.html)
-* something not working? Please check first if your case is covered in [common problems](#common-problems); if not: [open an issue](https://github.com/fmatter/flex-grammar-tutorial/issues)
+* something not working?
+    * Please check first if your case is covered in [common problems](#common-problems)
+    * if not: [open an issue](https://github.com/fmatter/flex-grammar-tutorial/issues)
 
 Breakdown of the workflow:
 1. convert FLEx exports to CLDF corpus dataset with `cldflex`
-2. create `pylingdocs` project
+2. write content in `pylingdocs` project
 3. create `clld` app
 
 ## Preliminaries
@@ -20,6 +22,8 @@ Breakdown of the workflow:
 ## Workflow
 
 **If you just want to see the demo 🔥right now🔥**: `make`
+
+Note: Quick instructions are given in parentheses.
 
 ### Setting up for the project
 First, install the python packages needed for the next two steps:
