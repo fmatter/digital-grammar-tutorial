@@ -15,9 +15,9 @@ The goal of this tutorial is to document a workflow that starts with a glossed c
 3. open an issue [here](https://github.com/fmatter/flex-grammar-tutorial/issues)
 
 Overview of the workflow:
-1. convert FLEx exports to CLDF corpus dataset with [`cldflex`](https://cldflex.readthedocs.io)
-2. write content in [`pylingdocs`](https://pylingdocs.readthedocs.io) project
-3. create a [`clld`](clld.org/) app based on [this template](https://github.com/fmatter/indicogram/)
+1. convert FLEx exports to a CLDF corpus dataset with [`cldflex`](https://cldflex.readthedocs.io)
+2. write linguistic description in [`pylingdocs`](https://pylingdocs.readthedocs.io) project
+3. run a [`clld`](clld.org/) app using [this template](https://github.com/fmatter/indicogram/)
 
 ## Preliminaries
 1. It is highly recommended that you create a [virtual environment](https://docs.python.org/3/library/venv.html) and then run all parts of this tutorial in that environment.
