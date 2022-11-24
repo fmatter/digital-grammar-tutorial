@@ -1,0 +1,4 @@
+cldflex
+pylingdocs
+clld-morphology-plugin
+clld-corpus-plugin
