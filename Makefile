@@ -10,19 +10,20 @@ all:
 
 setup: install cldflex indicogram
 	pylingdocs new
-	
+
 build:
 	make pylingdocs
 	make clld
 
 install:
-	pip3 install -r requirements.txt
+	pip3 install -e /home/florianm/Dropbox/development/cldflex/
+	pip3 install -e /home/florianm/Dropbox/development/pylingdocs
+	pip3 install -e /home/florianm/Dropbox/development/clld-plugins/clld-*
 
 cldflex:
 	cldflex flex2csv $(FLEXTEXT) --lexicon $(LIFT) --cldf
 
 indicogram:
-	git clone https://github.com/fmatter/indicogram/
 	cd indicogram; pip install -e .
 
 pylingdocs:
