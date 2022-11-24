@@ -14,8 +14,8 @@ The goal of this tutorial is to document a workflow that starts with a glossed c
 2. if it's evident that the error comes from one of the used python packages ([cldflex](https://github.com/fmatter/cldflex/issues), [pylingdocs](https://github.com/fmatter/pylingdocs/issues), [indicogram](https://github.com/fmatter/indicogram/issues)): open an issue at the relevant link. If not, continue.
 3. open an issue [here](https://github.com/fmatter/flex-grammar-tutorial/issues)
 
-Breakdown of the workflow:
-1. convert FLEx exports to CLDF corpus dataset with `cldflex`
+Overview of the workflow:
+1. convert FLEx exports to CLDF corpus dataset with [`cldflex`](https://cldflex.readthedocs.io)
 2. write content in `pylingdocs` project
 3. create `clld` app
 
