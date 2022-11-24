@@ -22,17 +22,18 @@ Breakdown of the workflow:
 **If you just want to see the demo 🔥right now🔥**: `make`
 
 ### Setting up for the project
-First, install the python packages needed for the next two steps
-* Install the requirements: `pip install -r requirements.txt` (`make install`)
+First, install the python packages needed for the next two steps:
+* `pip install -r requirements.txt` (`make install`)
 
 ### Creating the CLDF dataset
-1. export your FLEx text database to the `flex` directory (Makefile looks for `.flextext` in the `flex` folder)
-2. export your FLEx lexicon as `.lift` to the `flex` directory (Makefile looks for `.lift` in the `flex` folder)
+1. export your FLEx text database as `.flextext` (put in `flex` directory)
+2. export your FLEx lexicon as `.lift` (put in `flex` directory)
 3. `cldflex flex2csv flex/texts.flextext --lexicon flex/lexicon.lift --cldf` (`make cldflex`)
 
 ### Creating a pylingdocs project
-1. create a pylingdocs project (`pylingdocs new`) and write stuff (Makefile assumes something ending in "grammar")
-2. `pylingdocs cldf`
+1. create a pylingdocs project (`pylingdocs new`, Makefile assumes something ending in "grammar")
+2. (optional) and write stuff!
+2. create a CLDF dataset that contains your description (`pylingdocs cldf`)
 
 ### Set up a CLLD app
 1. fork, clone or download [https://github.com/fmatter/indicogram/](https://github.com/fmatter/indicogram/) into this folder (`make indicogram` -- this also takes care of the next step)
@@ -41,3 +42,7 @@ First, install the python packages needed for the next two steps
 
 ## FAQ
 * what is behind all this?
+    * it's-a me fl.mt/
+
+## Common problems
+* I don't understand.
