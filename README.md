@@ -19,7 +19,7 @@ It can be divided into three distinct steps:
 
 1. please check first if your case is covered in [common problems](#common-problems). If this solves your problem, please comment on the issue linked in the list. If this does not solve your problem, continue.
 2. if it's evident that the error comes from one of the used python packages ([cldflex](https://github.com/fmatter/cldflex/issues), [pylingdocs](https://github.com/fmatter/pylingdocs/issues), [indicogram](https://github.com/fmatter/indicogram/issues)): open an issue at the relevant link. If not, continue.
-3. open an issue [here](https://github.com/fmatter/flex-grammar-tutorial/issues)
+3. open an issue [here](https://github.com/fmatter/flex-grammar-tutorial/issues).
 
 
 ## Preliminaries
@@ -32,29 +32,29 @@ Note: Quick instructions are given in parentheses, making use of [this Makefile]
 1. export your FLEx text database as `.flextext` (into this folder)
 2. export your FLEx lexicon as `.lift` (into this folder)
 
-**If you just want to see the demo 🔥right now🔥**: `make` and then visit [localhost:6543](127.0.0.1:6543).
+**If you just want to see the demo 🔥right now🔥**: `make` and then visit `localhost:6543` in your webbrowser.
 
 ### Set up software dependencies
 First, install the python packages needed for the next two steps:
 * `pip install -r requirements.txt` (`make install`)
 
 ### Create a CLDF version of your corpus
-* `cldflex flex2csv flex/texts.flextext --lexicon flex/lexicon.lift --cldf` (`make cldflex`)
+* `cldflex flex2csv texts.flextext --lexicon lexicon.lift --cldf` (`make cldflex`) [^1]
 
 ### Create a pylingdocs project based on that CLDF dataset
 1. create a pylingdocs project (`pylingdocs new`, Makefile assumes something ending in "grammar")
 2. (optional) write stuff! ([how to use pylingdocs](https://pylingdocs.readthedocs.io/en/latest/usage.html#quick-start))
-3. create another CLDF dataset containing your description (`pylingdocs cldf`)
+3. create another CLDF dataset combining data and description (`pylingdocs cldf`)
 
 ### Set up a CLLD app
 1. fork, clone or download [https://github.com/fmatter/indicogram/](https://github.com/fmatter/indicogram/) into this folder (`make indicogram` -- this also takes care of the next step)
 2. `pip install -e indicogram` (`make indicogram` already took care of this)
 3. build the `clld` database and serve it (`make clld`)
-4. view the preview under [localhost:6543](127.0.0.1:6543)
+4. view the app in your webbroser at `localhost:6543`
 
 ## FAQ
-* what is behind all this?
-    * it's-a me fl.mt/
 
 ## Common problems
 Problems will be listed here.
+
+[^1]: Depending on the setup of your FLEx database, this will throw all sorts of warnings at you and complain about inconsistencies. You can fix them in your database, but things should largely work even if you ignore them. If you think a particular warning is inaccurate, open an issue [here](https://github.com/fmatter/cldflex/issues).

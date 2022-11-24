@@ -9,25 +9,25 @@ all:
 	make build
 
 setup: install cldflex indicogram
-	pylingdocs new
-
+	: "IF YOU ARE USING THE make COMMANDS, MAKE SURE YOUR PROJECT NAME ENDS IN 'grammar'"
+	pylingdocs new # set up a new pylingdocs project
+	
 build:
 	make pylingdocs
 	make clld
 
 install:
-	pip3 install -e /home/florianm/Dropbox/development/cldflex/
-	pip3 install -e /home/florianm/Dropbox/development/pylingdocs
-	pip3 install -e /home/florianm/Dropbox/development/clld-plugins/clld-*
+	pip3 install -r requirements.txt # install the toolchain
 
 cldflex:
-	cldflex flex2csv $(FLEXTEXT) --lexicon $(LIFT) --cldf
+	cldflex flex2csv $(FLEXTEXT) --lexicon $(LIFT) --cldf # convert FLEx database to CLDF
 
 indicogram:
-	cd indicogram; pip install -e .
+	git clone https://github.com/fmatter/indicogram/ # download the CLLD app
+	cd indicogram; pip install -e . # install it
 
 pylingdocs:
-	cd $(CLLD_GRAMMAR); pylingdocs cldf
+	cd $(CLLD_GRAMMAR); pylingdocs cldf # build a CLDF dataset containing your pylingdocs document
 
 clld:
-	cd indicogram; clld initdb development.ini --cldf ../$(CLLD_GRAMMAR)/output/cldf/metadata.json; pserve --reload development.ini
+	cd indicogram; clld initdb development.ini --cldf ../$(CLLD_GRAMMAR)/output/cldf/metadata.json; pserve --reload development.ini # set up CLLD database from CLDF datataset, run app
