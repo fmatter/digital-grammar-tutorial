@@ -19,7 +19,7 @@ Breakdown of the workflow:
 
 ## Workflow
 
-**If you just want to see the demo, right now**: `make`
+**If you just want to see the demo 🔥right now🔥**: `make`
 
 ### Setting up for the project
 First, install the python packages needed for the next two steps
