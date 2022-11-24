@@ -9,7 +9,7 @@ The goal of this tutorial is to document a workflow that starts with a glossed c
     * optional: [Pandoc](https://pandoc.org/installing.html) (for other output formats)
 
 
-** Running into problems? **
+**Running into problems?**
     * please check first if your case is covered in [common problems](#common-problems)
     * if not: [open an issue](https://github.com/fmatter/flex-grammar-tutorial/issues)
 
