@@ -39,7 +39,7 @@ First, install the python packages needed for the next two steps:
 
 ### Creating a pylingdocs project
 1. create a pylingdocs project (`pylingdocs new`, Makefile assumes something ending in "grammar")
-2. (optional) and write stuff!
+2. (optional) write stuff!
 2. create a CLDF dataset that contains your description (`pylingdocs cldf`)
 
 ### Set up a CLLD app
