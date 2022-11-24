@@ -18,7 +18,7 @@ Breakdown of the workflow:
 
 ## Workflow
 
-**If you**: `make`
+**If you just want to see the demo, right now**: `make`
 
 ### Setting up for the project
 * Install the requirements: `pip install -r requirements.txt` (`make install`)
