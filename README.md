@@ -26,7 +26,7 @@ Overview of the workflow:
 
 **If you just want to see the demo 🔥right now🔥**: `make` and then visit [localhost:6543](https://localhost:6543).
 
-Note: Quick instructions are given in parentheses.
+Note: Quick instructions are given in parentheses, making use of [this Makefile](Makefile).
 
 ### Setting up for the project
 First, install the python packages needed for the next two steps:
