@@ -18,7 +18,7 @@ Breakdown of the workflow:
 
 ## Workflow
 
-**TLDR**: `make`
+**If you**: `make`
 
 ### Setting up for the project
 * Install the requirements: `pip install -r requirements.txt` (`make install`)
@@ -35,3 +35,6 @@ Breakdown of the workflow:
 ### Set up a CLLD app
 1. fork, clone or download [https://github.com/fmatter/indicogram/](https://github.com/fmatter/indicogram/) into this folder (`make indicogram`)
 2. build the `clld` database and serve it (`make clld`)
+
+## FAQ
+* what is behind all this?
