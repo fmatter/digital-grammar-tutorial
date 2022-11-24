@@ -9,7 +9,7 @@ It can be divided into three distinct steps:
 
 **Requirements**
 
-* knowledge prerequisites: command line literacy ([this tutorial](https://github.com/dictionaria/pydictionaria/blob/master/docs/intro-commandline.md) by Johannes Englisch or [this launschool book](https://launchschool.com/books/command_line/read/introduction) may help)
+* knowledge prerequisites: command line literacy ([this tutorial](https://github.com/dictionaria/pydictionaria/blob/master/docs/intro-commandline.md) by Johannes Englisch or [this LaunchSchool book](https://launchschool.com/books/command_line/read/introduction) may help)
 * software prerequisites:
     * a working [python](https://www.python.org/) 3.7+ installation
     * [git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
@@ -23,34 +23,34 @@ It can be divided into three distinct steps:
 
 
 ## Preliminaries
-1. It is highly recommended that you create a [virtual environment](https://docs.python.org/3/library/venv.html) and then run all parts of this tutorial in that environment.
+It is highly recommended that you create a [virtual environment](https://docs.python.org/3/library/venv.html) and then run all parts of this tutorial in that environment.
 
 ## Workflow
 Note: Quick instructions are given in parentheses, making use of [this Makefile](Makefile).
 
 ### Export your FLEx data
-1. export your FLEx text database as `.flextext` (put in `flex` directory)
-2. export your FLEx lexicon as `.lift` (put in `flex` directory)
+1. export your FLEx text database as `.flextext` (into this folder)
+2. export your FLEx lexicon as `.lift` (into this folder)
 
-**If you just want to see the demo 🔥right now🔥**: `make` and then visit [localhost:6543](https://localhost:6543).
+**If you just want to see the demo 🔥right now🔥**: `make` and then visit [localhost:6543](127.0.0.1:6543).
 
-### Setting up for the project
+### Set up software dependencies
 First, install the python packages needed for the next two steps:
 * `pip install -r requirements.txt` (`make install`)
 
-### Creating the CLDF dataset
+### Create a CLDF version of your corpus
 * `cldflex flex2csv flex/texts.flextext --lexicon flex/lexicon.lift --cldf` (`make cldflex`)
 
-### Creating a pylingdocs project
+### Create a pylingdocs project based on that CLDF dataset
 1. create a pylingdocs project (`pylingdocs new`, Makefile assumes something ending in "grammar")
 2. (optional) write stuff! ([how to use pylingdocs](https://pylingdocs.readthedocs.io/en/latest/usage.html#quick-start))
-2. create a CLDF dataset that contains your description (`pylingdocs cldf`)
+3. create another CLDF dataset containing your description (`pylingdocs cldf`)
 
 ### Set up a CLLD app
 1. fork, clone or download [https://github.com/fmatter/indicogram/](https://github.com/fmatter/indicogram/) into this folder (`make indicogram` -- this also takes care of the next step)
 2. `pip install -e indicogram` (`make indicogram` already took care of this)
 3. build the `clld` database and serve it (`make clld`)
-4. view the preview under [localhost:6543](https://localhost:6543)
+4. view the preview under [localhost:6543](127.0.0.1:6543)
 
 ## FAQ
 * what is behind all this?

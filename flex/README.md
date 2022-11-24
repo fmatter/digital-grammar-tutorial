@@ -1,1 +1,0 @@
-This is the directory when you put your `.flextext` and your `.lift` file

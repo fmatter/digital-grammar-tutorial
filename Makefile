@@ -1,6 +1,6 @@
 CLLD_GRAMMAR = $(shell find *grammar -maxdepth 0 )
-FLEXTEXT = $(shell find flex/*flextext -maxdepth 0 )
-LIFT = $(shell find flex/*lift -maxdepth 0 )
+FLEXTEXT = $(shell find *flextext -maxdepth 0 )
+LIFT = $(shell find *lift -maxdepth 0 )
 
 .PHONY: indicogram
 
