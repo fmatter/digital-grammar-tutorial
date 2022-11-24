@@ -10,7 +10,7 @@ The goal of this tutorial is to document a workflow that starts with a glossed c
 
 **Running into problems?**
 
-1. please check first if your case is covered in [common problems](#common-problems). If this does not solve your problem, continue.
+1. please check first if your case is covered in [common problems](#common-problems). If this solves your problem, please comment on the issue linked in the list. If this does not solve your problem, continue.
 2. if it's evident that the error comes from one of the used python packages ([cldflex](https://github.com/fmatter/cldflex/issues), [pylingdocs](https://github.com/fmatter/pylingdocs/issues), [indicogram](https://github.com/fmatter/indicogram/issues)): open an issue at the relevant link. If not, continue.
 3. open an issue [here](https://github.com/fmatter/flex-grammar-tutorial/issues)
 
@@ -53,4 +53,4 @@ First, install the python packages needed for the next two steps:
     * it's-a me fl.mt/
 
 ## Common problems
-* I don't understand.
+Problems will be listed here.
