@@ -8,7 +8,7 @@ The goal of this tutorial is to document a workflow that starts with a glossed c
     * [git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
     * optional: [Pandoc](https://pandoc.org/installing.html) (for other output formats)
 * something not working?
-    * Please check first if your case is covered in [common problems](#common-problems)
+    * please check first if your case is covered in [common problems](#common-problems)
     * if not: [open an issue](https://github.com/fmatter/flex-grammar-tutorial/issues)
 
 Breakdown of the workflow:
@@ -21,7 +21,7 @@ Breakdown of the workflow:
 
 ## Workflow
 
-**If you just want to see the demo 🔥right now🔥**: `make`
+**If you just want to see the demo 🔥right now🔥**: `make` and then visit [localhost:6543](https://localhost:6543).
 
 Note: Quick instructions are given in parentheses.
 
@@ -41,8 +41,9 @@ First, install the python packages needed for the next two steps:
 
 ### Set up a CLLD app
 1. fork, clone or download [https://github.com/fmatter/indicogram/](https://github.com/fmatter/indicogram/) into this folder (`make indicogram` -- this also takes care of the next step)
-2. `pip install -e /indicogram` (`make indicogram` already took care of this)
-2. build the `clld` database and serve it (`make clld`)
+2. `pip install -e indicogram` (`make indicogram` already took care of this)
+3. build the `clld` database and serve it (`make clld`)
+4. view the preview under [localhost:6543](https://localhost:6543)
 
 ## FAQ
 * what is behind all this?
