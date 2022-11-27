@@ -32,7 +32,7 @@ source env/bin/activate
 ```
 
 ## 1 Workflow
-Note: [this Makefile](Makefile) contains a list of command definitions.
+Note: [the Makefile](Makefile) contains a list of command definitions.
 Where applicable, steps below will have an `make X` instruction in parentheses.
 
 ### 1.2 Export your FLEx data
@@ -41,7 +41,7 @@ Where applicable, steps below will have an `make X` instruction in parentheses.
 
 **If you just want to see the demo 🔥right now🔥**: run `make all` and visit `localhost:6543` in your webbrowser.
 
-(If you don't have usable FLEx data, the `cldflex` repo contains example [flextext](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.flextext) and [lift](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.lift) files.)
+(If you don't have usable FLEx data, the `cldflex` repo contains example [flextext](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.flextext) and [lift](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.lift) files that you can use.)
 
 ### 1.3 Set up software dependencies
 First, install the python packages needed for the next two steps (`make install`):
@@ -70,7 +70,7 @@ pylingdocs new
 3. create another CLDF dataset combining data and description (`make pylingdocs`):
 
 ```shell
-cd your-grammar;  pylingdocs cldf
+cd your-grammar; pylingdocs cldf
 ```
 
 ### 1.6 Set up a CLLD app
