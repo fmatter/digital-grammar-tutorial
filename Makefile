@@ -11,7 +11,11 @@ all:
 setup: install cldflex indicogram
 	: "IF YOU ARE USING THE make COMMANDS, MAKE SURE YOUR PROJECT NAME ENDS IN 'grammar'"
 	pylingdocs new # set up a new pylingdocs project
-	
+
+demofiles:
+	curl https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.flextext -o texts.flextext
+	curl https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.lift -o lexicon.lift
+
 build:
 	make pylingdocs
 	make clld

@@ -41,7 +41,7 @@ Where applicable, steps below will have an `make X` instruction in parentheses.
 
 **If you just want to see the demo 🔥right now🔥**: run `make all` and visit `localhost:6543` in your webbrowser.
 
-(If you don't have usable FLEx data, the `cldflex` repo contains example [flextext](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.flextext) and [lift](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.lift) files that you can use.)
+(If you don't have usable FLEx data, the `cldflex` repo contains example [flextext](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.flextext) and [lift](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.lift) files that you can use [`make demofiles`])
 
 ### 1.3 Set up software dependencies
 First, install the python packages needed for the next two steps (`make install`):
