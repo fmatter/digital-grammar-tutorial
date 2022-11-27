@@ -39,9 +39,9 @@ Where applicable, steps below will have an `make X` instruction in parentheses.
 1. export your FLEx text database as `.flextext` (into this folder)
 2. export your FLEx lexicon as `.lift` (into this folder)
 
-**If you just want to see the demo 🔥right now🔥**: run `make` to execute all steps in the Makefile and then visit `localhost:6543` in your webbrowser.
+**If you just want to see the demo 🔥right now🔥**: run `make all` and visit `localhost:6543` in your webbrowser.
 
-(If you don't have usable FLEx data, `cldflex` contains example [flextext](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.flextext) and [lift](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.lift) files.)
+(If you don't have usable FLEx data, the `cldflex` repo contains example [flextext](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.flextext) and [lift](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.lift) files.)
 
 ### 1.3 Set up software dependencies
 First, install the python packages needed for the next two steps (`make install`):
@@ -60,7 +60,7 @@ Next, use `cldflex` to transform the contents of your `.flextext` and `.lift` fi
 Note that you can also create a CLDF dataset in some other way, e.g. by using [`cldfbench`](https://cldfbench.readthedocs.io), or you can work with an existing dataset.
 
 ### 1.5 Create a pylingdocs project based on that CLDF dataset
-1. create a pylingdocs project (**the Makefile looks for an ID ending in `grammar`**)
+1. create a pylingdocs project (the Makefile looks for an ID ending in `grammar`!)
 
 ```shell
 pylingdocs new
@@ -70,14 +70,26 @@ pylingdocs new
 3. create another CLDF dataset combining data and description (`make pylingdocs`):
 
 ```shell
-cd your-grammar pylingdocs cldf
+cd your-grammar;  pylingdocs cldf
 ```
 
 ### 1.6 Set up a CLLD app
-1. fork, clone or download [https://github.com/fmatter/indicogram/](https://github.com/fmatter/indicogram/) into this folder (`make indicogram` -- this also takes care of the next step):
-2. `pip install -e indicogram` (`make indicogram` already took care of this)
-3. build the `clld` database and serve it (`make clld`)
-4. view the app in your webbroser at `localhost:6543`
+1. fork, clone or download [https://github.com/fmatter/indicogram/](https://github.com/fmatter/indicogram/) into this folder and install it (`make indicogram`):
+
+
+```shell
+pip install -e indicogram
+```
+
+2. build the `clld` database and serve it (`make clld`):
+
+```shell
+cd indicogram
+clld initdb development.ini --cldf ../your-grammar/output/cldf/metadata.json
+pserve --reload development.ini
+```
+
+3. view the app in your webbroser at `localhost:6543`
 
 ## 2 FAQ
 
