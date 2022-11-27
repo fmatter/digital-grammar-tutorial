@@ -2,7 +2,7 @@
 Cite as:
 
     Matter, Florian. 2022. How to use your FLEx database to create a digital grammar. https://github.com/fmatter/flex-grammar-tutorial/releases/tag/v0.0.1
-The goal of this tutorial is to document a workflow that starts with a glossed corpus in [FLEx](https://software.sil.org/fieldworks/) and creates a web app serving an interactive digital grammar.
+The goal of this tutorial is to document a workflow that starts with a glossed corpus from [FLEx](https://software.sil.org/fieldworks/) and creates a web app serving an interactive digital grammar.
 It can be divided into three distinct steps:
 
 1. convert FLEx exports to a CLDF corpus dataset with [`cldflex`](https://cldflex.readthedocs.io)
@@ -15,7 +15,7 @@ It can be divided into three distinct steps:
 * software prerequisites:
     * a working [python](https://www.python.org/) 3.7+ installation
     * [git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
-    * optional: [Pandoc](https://pandoc.org/installing.html if you want to use `pylingdocs` for output formats other than a CLLD app
+    * optional: [Pandoc](https://pandoc.org/installing.html) if you want to use `pylingdocs` for output formats other than a CLLD app
 
 **Running into problems?**
 
@@ -44,22 +44,37 @@ Where applicable, steps below will have an `make X` instruction in parentheses.
 (If you don't have usable FLEx data, `cldflex` contains example [flextext](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.flextext) and [lift](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.lift) files.)
 
 ### 1.3 Set up software dependencies
-First, install the python packages needed for the next two steps:
-* `pip install -r requirements.txt` (`make install`)
+First, install the python packages needed for the next two steps (`make install`):
+
+```shell
+pip install -r requirements.txt
+```
 
 ### 1.4 Create a CLDF version of your corpus
-Next, use `cldflex` to transform the contents of your `.flextext` and `.lift` files to a CLDF dataset:
-* `cldflex flex2csv <filename>.flextext --lexicon <filename>.lift --cldf` (`make cldflex`) [^1]
+Next, use `cldflex` to transform the contents of your `.flextext` and `.lift` files to a CLDF dataset (`make cldflex`):[^1]
+
+```shell
+`cldflex flex2csv <filename>.flextext --lexicon <filename>.lift --cldf`
+```
 
 Note that you can also create a CLDF dataset in some other way, e.g. by using [`cldfbench`](https://cldfbench.readthedocs.io), or you can work with an existing dataset.
 
 ### 1.5 Create a pylingdocs project based on that CLDF dataset
-1. create a pylingdocs project (`pylingdocs new` – **the Makefile looks for an ID ending in `grammar`**)
+1. create a pylingdocs project (**the Makefile looks for an ID ending in `grammar`**)
+
+```shell
+pylingdocs new
+```
+
 2. (optional) write stuff! ([how to use pylingdocs](https://pylingdocs.readthedocs.io/en/latest/usage.html#quick-start))
-3. create another CLDF dataset combining data and description by running `pylingdocs cldf` in your new project (`make pylingdocs`)
+3. create another CLDF dataset combining data and description (`make pylingdocs`):
+
+```shell
+cd your-grammar pylingdocs cldf
+```
 
 ### 1.6 Set up a CLLD app
-1. fork, clone or download [https://github.com/fmatter/indicogram/](https://github.com/fmatter/indicogram/) into this folder (`make indicogram` -- this also takes care of the next step)
+1. fork, clone or download [https://github.com/fmatter/indicogram/](https://github.com/fmatter/indicogram/) into this folder (`make indicogram` -- this also takes care of the next step):
 2. `pip install -e indicogram` (`make indicogram` already took care of this)
 3. build the `clld` database and serve it (`make clld`)
 4. view the app in your webbroser at `localhost:6543`
