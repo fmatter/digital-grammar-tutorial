@@ -2,11 +2,11 @@
 Cite as:
 
     Matter, Florian. 2022. How to use your FLEx database to create a digital grammar. https://github.com/fmatter/flex-grammar-tutorial/releases/tag/v0.0.1
-The goal of this tutorial is to document a workflow that starts with a glossed corpus in [FLEx](https://software.sil.org/fieldworks/) and results in a web app serving an interactive digital grammar.
+The goal of this tutorial is to document a workflow that starts with a glossed corpus in [FLEx](https://software.sil.org/fieldworks/) and creates a web app serving an interactive digital grammar.
 It can be divided into three distinct steps:
 
 1. convert FLEx exports to a CLDF corpus dataset with [`cldflex`](https://cldflex.readthedocs.io)
-2. write linguistic description in [`pylingdocs`](https://pylingdocs.readthedocs.io) project
+2. write linguistic description in a [`pylingdocs`](https://pylingdocs.readthedocs.io) project
 3. set up and serve a [`clld`](clld.org/) database using [this template](https://github.com/fmatter/indicogram/)
 
 **Requirements**
@@ -15,7 +15,7 @@ It can be divided into three distinct steps:
 * software prerequisites:
     * a working [python](https://www.python.org/) 3.7+ installation
     * [git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
-    * optional: [Pandoc](https://pandoc.org/installing.html) (for output formats other than a CLLD app)
+    * optional: [Pandoc](https://pandoc.org/installing.html if you want to use `pylingdocs` for output formats other than a CLLD app
 
 **Running into problems?**
 
@@ -23,42 +23,50 @@ It can be divided into three distinct steps:
 2. if it's evident that the error comes from one of the used python packages ([cldflex](https://github.com/fmatter/cldflex/issues), [pylingdocs](https://github.com/fmatter/pylingdocs/issues), [indicogram](https://github.com/fmatter/indicogram/issues)): click the respective link and open an issue. Otherwise, continue.
 3. open an issue [here](https://github.com/fmatter/flex-grammar-tutorial/issues).
 
-## Preliminaries
-It is highly recommended that you create a [virtual environment](https://docs.python.org/3/library/venv.html) and then run all parts of this tutorial in that environment.
+## 0 Preliminaries
+It is highly recommended that you create a [virtual environment](https://docs.python.org/3/library/venv.html) and then run all parts of this tutorial in that environment:
 
-## Workflow
-Note: Quick instructions are given in parentheses, making use of [this Makefile](Makefile).
+```shell
+python -m venv env
+source env/bin/activate
+```
 
-### Export your FLEx data
+## 1 Workflow
+Note: [this Makefile](Makefile) contains a list of command definitions.
+Where applicable, steps below will have an `make X` instruction in parentheses.
+
+### 1.2 Export your FLEx data
 1. export your FLEx text database as `.flextext` (into this folder)
 2. export your FLEx lexicon as `.lift` (into this folder)
 
-**If you just want to see the demo 🔥right now🔥**: `make` and then visit `localhost:6543` in your webbrowser.
+**If you just want to see the demo 🔥right now🔥**: run `make` to execute all steps in the Makefile and then visit `localhost:6543` in your webbrowser.
 
-### Set up software dependencies
+(If you don't have usable FLEx data, `cldflex` contains example [flextext](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.flextext) and [lift](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.lift) files.)
+
+### 1.3 Set up software dependencies
 First, install the python packages needed for the next two steps:
 * `pip install -r requirements.txt` (`make install`)
 
-### Create a CLDF version of your corpus
+### 1.4 Create a CLDF version of your corpus
 Next, use `cldflex` to transform the contents of your `.flextext` and `.lift` files to a CLDF dataset:
-* `cldflex flex2csv texts.flextext --lexicon lexicon.lift --cldf` (`make cldflex`) [^1]
+* `cldflex flex2csv <filename>.flextext --lexicon <filename>.lift --cldf` (`make cldflex`) [^1]
 
 Note that you can also create a CLDF dataset in some other way, e.g. by using [`cldfbench`](https://cldfbench.readthedocs.io), or you can work with an existing dataset.
 
-### Create a pylingdocs project based on that CLDF dataset
-1. create a pylingdocs project (`pylingdocs new`, note that the Makefile assumes something ending in `grammar`)
+### 1.5 Create a pylingdocs project based on that CLDF dataset
+1. create a pylingdocs project (`pylingdocs new` – **the Makefile looks for an ID ending in `grammar`**)
 2. (optional) write stuff! ([how to use pylingdocs](https://pylingdocs.readthedocs.io/en/latest/usage.html#quick-start))
 3. create another CLDF dataset combining data and description by running `pylingdocs cldf` in your new project (`make pylingdocs`)
 
-### Set up a CLLD app
+### 1.6 Set up a CLLD app
 1. fork, clone or download [https://github.com/fmatter/indicogram/](https://github.com/fmatter/indicogram/) into this folder (`make indicogram` -- this also takes care of the next step)
 2. `pip install -e indicogram` (`make indicogram` already took care of this)
 3. build the `clld` database and serve it (`make clld`)
 4. view the app in your webbroser at `localhost:6543`
 
-## FAQ
+## 2 FAQ
 
-## Common problems
+## 3 Common problems
 Problems will be listed here.
 
 [^1]: Depending on the setup of your FLEx database, this will throw all sorts of warnings at you and complain about inconsistencies. You can fix them in your database, but things should largely work even if you ignore them. If you think a particular warning is inaccurate, open an issue [here](https://github.com/fmatter/cldflex/issues).
