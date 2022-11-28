@@ -65,6 +65,7 @@ Note that you can also create a CLDF dataset in some other way, e.g. by using [`
 ```shell
 pylingdocs new
 ```
+You will be asked some setup prompts.
 
 2. (optional) write stuff! ([how to use pylingdocs](https://pylingdocs.readthedocs.io/en/latest/usage.html#quick-start))
 3. create another CLDF dataset combining data and description (`make pylingdocs`):
