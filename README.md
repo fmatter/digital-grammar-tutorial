@@ -1,7 +1,7 @@
 # How to use your FLEx database to create a digital grammar
 Cite as:
 
-    Matter, Florian. 2022. How to use your FLEx database to create a digital grammar. https://github.com/fmatter/flex-grammar-tutorial/releases/tag/v0.0.1
+    Matter, Florian. 2022. How to use your FLEx database to create a digital grammar. https://github.com/fmatter/flex-grammar-tutorial/releases/tag/v0.0.2
 The goal of this tutorial is to showcase a workflow that starts with a glossed corpus from [FLEx](https://software.sil.org/fieldworks/) and creates a web app serving an interactive digital grammar.
 It can be divided into three distinct steps:
 
