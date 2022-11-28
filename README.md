@@ -40,8 +40,8 @@ Note: [the Makefile](Makefile) contains a list of command definitions.
 Where applicable, steps below will have an `make X` instruction in parentheses.
 
 ### 1.2 Export your FLEx data
-1. export your FLEx text database as `.flextext` (into this folder)
-2. export your FLEx lexicon as `.lift` (into this folder)
+1. export your FLEx text database as `.flextext`[^1] (into this folder)
+2. export your FLEx lexicon as `.lift`[^2] (into this folder)
 
 **If you just want to see the demo 🔥right now🔥**: run `make all` and visit `localhost:6543` in your webbrowser.
 
@@ -67,7 +67,7 @@ cldfbench catconfig
 Alternatively, you can provide a `languages.csv` file to `cldflex` ([minimal example](https://github.com/fmatter/cldflex/blob/main/tests/data/languages.csv)).
 
 ### 1.5 Create a CLDF version of your corpus
-Next, use `cldflex` to transform the contents of your `.flextext` and `.lift` files to a CLDF dataset (`make cldflex`):[^1]
+Next, use `cldflex` to transform the contents of your `.flextext` and `.lift` files to a CLDF dataset (`make cldflex`):[^3]
 
 ```shell
 `cldflex flex2csv <filename>.flextext --lexicon <filename>.lift --cldf`
@@ -113,4 +113,6 @@ pserve --reload development.ini
 ## 3 Common problems
 Problems will be listed here.
 
-[^1]: Depending on the setup of your FLEx database, this will throw all sorts of warnings at you and complain about inconsistencies. You can fix them in your database, but things should largely work even if you ignore them. If you think a particular warning is inaccurate, open an issue [here](https://github.com/fmatter/cldflex/issues).
+[^1]: Navigate to `Text & Words > Interlinear Texts`, open the `Analyzed` tab, use the menu `File > Export Interlinear...` and choose the first option ("ELAN, SayMore, FLEx"). You can include one or multiple texts.
+[^2]: Navigate to `Lexicon`, use the menu `File > Export...` and choose the option "Full Lexicon (LIFT 0.13 XML)".
+[^3]: Depending on the setup of your FLEx database, this will throw all sorts of warnings at you and complain about inconsistencies. You can fix them in your database, but things should largely work even if you ignore them. If you think a particular warning is inaccurate, open an issue [here](https://github.com/fmatter/cldflex/issues).
