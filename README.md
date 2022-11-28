@@ -92,8 +92,7 @@ cd your-grammar; pylingdocs cldf
 ```
 
 ### 1.7 Set up a CLLD app
-1. fork, clone or download [this repo](https://github.com/fmatter/indicogram/) into this folder and install it (`make indicogram` does both):
-
+1. (fork and) clone or download [this repo](https://github.com/fmatter/indicogram/) into this folder and install it (`make indicogram` does both):
 
 ```shell
 pip install -e indicogram
