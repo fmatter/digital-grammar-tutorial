@@ -2,7 +2,7 @@
 Cite as:
 
     Matter, Florian. 2022. How to use your FLEx database to create a digital grammar. https://github.com/fmatter/flex-grammar-tutorial/releases/tag/v0.0.1
-The goal of this tutorial is to document a workflow that starts with a glossed corpus from [FLEx](https://software.sil.org/fieldworks/) and creates a web app serving an interactive digital grammar.
+The goal of this tutorial is to showcase a workflow that starts with a glossed corpus from [FLEx](https://software.sil.org/fieldworks/) and creates a web app serving an interactive digital grammar.
 It can be divided into three distinct steps:
 
 1. convert FLEx exports to a CLDF corpus dataset with [`cldflex`](https://cldflex.readthedocs.io)
@@ -15,13 +15,15 @@ It can be divided into three distinct steps:
 * software prerequisites:
     * a working [python](https://www.python.org/) 3.7+ installation
     * [git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
+    * system-specific:
+        * macOS: [Xcode Command Line Tools](https://www.freecodecamp.org/news/install-xcode-command-line-tools/) (`xcode-select --install`)
+        * windows: ?
+        * Linux: you should be fine
     * optional: [Pandoc](https://pandoc.org/installing.html) if you want to use `pylingdocs` for output formats other than a CLLD app
-    * macOS: Developer Tools (`xcode-select -—install`)
-    * windows: ?
 
 **Running into problems?**
 
-1. please check first if your case is covered in [common problems](#common-problems). If this does not solve your problem, continue.
+1. please check first if your case is covered in [common problems](#3-common-problems). If this does not solve your problem, continue.
 2. if it's evident that the error comes from one of the used python packages ([cldflex](https://github.com/fmatter/cldflex/issues), [pylingdocs](https://github.com/fmatter/pylingdocs/issues), [indicogram](https://github.com/fmatter/indicogram/issues)): click the respective link and open an issue. Otherwise, continue.
 3. open an issue [here](https://github.com/fmatter/flex-grammar-tutorial/issues).
 
@@ -46,7 +48,7 @@ Where applicable, steps below will have an `make X` instruction in parentheses.
 (If you don't have usable FLEx data, the `cldflex` repo contains example [flextext](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.flextext) and [lift](https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.lift) files that you can use [`make demofiles`])
 
 ### 1.3 Set up software dependencies
-First, install the python packages needed for the next two steps (`make install`):
+Install the python packages needed for the next two steps (`make install`):
 
 ```shell
 pip install -r requirements.txt
@@ -62,7 +64,7 @@ To do so, run the following command and say `y` to installing the glottolog cata
 cldfbench catconfig
 ```
 
-Alternatively, you can provide a `languages.csv` file to `cldflex`.
+Alternatively, you can provide a `languages.csv` file to `cldflex` ([minimal example](https://github.com/fmatter/cldflex/blob/main/tests/data/languages.csv)).
 
 ### 1.5 Create a CLDF version of your corpus
 Next, use `cldflex` to transform the contents of your `.flextext` and `.lift` files to a CLDF dataset (`make cldflex`):[^1]
@@ -79,7 +81,8 @@ Note that you can also create a CLDF dataset in some other way, e.g. by using [`
 ```shell
 pylingdocs new
 ```
-You will be asked some setup prompts.
+You will be asked some project setup prompts; the crucial one asks for the location of your CLDF dataset.
+If you followed the instructions so far, the default (`cldf/metadata.json`) should work; otherwise, enter the path to your dataset.
 
 2. (optional) write stuff! ([how to use pylingdocs](https://pylingdocs.readthedocs.io/en/latest/usage.html#quick-start))
 3. create another CLDF dataset combining data and description (`make pylingdocs`):
@@ -89,7 +92,7 @@ cd your-grammar; pylingdocs cldf
 ```
 
 ### 1.7 Set up a CLLD app
-1. fork, clone or download [this repo](https://github.com/fmatter/indicogram/) into this folder and install it (`make indicogram`):
+1. fork, clone or download [this repo](https://github.com/fmatter/indicogram/) into this folder and install it (`make indicogram` does both):
 
 
 ```shell
