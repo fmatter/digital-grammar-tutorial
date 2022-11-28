@@ -11,13 +11,13 @@ It can be divided into three distinct steps:
 
 **Requirements**
 
-* knowledge prerequisites: command line literacy ([this tutorial](https://github.com/dictionaria/pydictionaria/blob/master/docs/intro-commandline.md) by Johannes Englisch or [this LaunchSchool book](https://launchschool.com/books/command_line/read/introduction) may help)
+* knowledge prerequisites: basic command line literacy ([this tutorial](https://github.com/dictionaria/pydictionaria/blob/master/docs/intro-commandline.md) by Johannes Englisch or [this LaunchSchool book](https://launchschool.com/books/command_line/read/introduction) may help)
 * software prerequisites:
     * a working [python](https://www.python.org/) 3.7+ installation
     * [git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
     * system-specific:
         * macOS: [Xcode Command Line Tools](https://www.freecodecamp.org/news/install-xcode-command-line-tools/) (`xcode-select --install`)
-        * windows: ?
+        * Windows: ?
         * Linux: you should be fine
     * optional: [Pandoc](https://pandoc.org/installing.html) if you want to use `pylingdocs` for output formats other than a CLLD app
 
