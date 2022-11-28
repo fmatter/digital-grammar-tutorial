@@ -13,8 +13,8 @@ setup: install cldflex indicogram
 	pylingdocs new # set up a new pylingdocs project
 
 demofiles:
-	curl https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.flextext -o texts.flextext
-	curl https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.lift -o lexicon.lift
+	curl https://raw.githubusercontent.com/fmatter/cldflex/main/tests/data/apalai.flextext -o texts.flextext
+	curl https://raw.githubusercontent.com/fmatter/cldflex/main/tests/data/apalai.lift -o lexicon.lift
 
 build:
 	make pylingdocs
