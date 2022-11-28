@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: flex-grammar-tutorial
+type: dataset
+authors:
+  - given-names: Florian
+    family-names: Matter
+    email: fmatter@mailbox.org
+    affiliation: University of Oregon
+    orcid: 0000-0002-2545-5154
+preferred-citation:
+  type: unpublished
+  authors:
+  - given-names: Florian
+    family-names: Matter
+    email: fmatter@mailbox.org
+    affiliation: University of Oregon
+    orcid: 0000-0002-2545-5154
+  title: "How to use your FLEx database to create a digital grammar"
+  url: https://github.com/fmatter/flex-grammar-tutorial/releases/tag/v0.0.2
+  year: 2022
