@@ -8,13 +8,16 @@ all:
 	make setup
 	make build
 
-setup: install cldflex indicogram
+setup: install cldflex glottolog indicogram
 	: "IF YOU ARE USING THE make COMMANDS, MAKE SURE YOUR PROJECT NAME ENDS IN 'grammar'"
 	pylingdocs new # set up a new pylingdocs project
 
 demofiles:
 	curl https://raw.githubusercontent.com/fmatter/cldflex/main/tests/data/apalai.flextext -o texts.flextext
 	curl https://raw.githubusercontent.com/fmatter/cldflex/main/tests/data/apalai.lift -o lexicon.lift
+
+glottolog:
+	cldfbench catconfig
 
 build:
 	make pylingdocs

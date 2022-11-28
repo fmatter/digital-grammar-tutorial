@@ -1,4 +1,5 @@
-cldflex
+cldflex[extras]
+cldfbench[glottolog]
 cldfviz == 0.9.0
 pylingdocs
 clld-morphology-plugin

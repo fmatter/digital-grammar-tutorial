@@ -16,6 +16,8 @@ It can be divided into three distinct steps:
     * a working [python](https://www.python.org/) 3.7+ installation
     * [git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
     * optional: [Pandoc](https://pandoc.org/installing.html) if you want to use `pylingdocs` for output formats other than a CLLD app
+    * macOS: Developer Tools (`xcode-select -—install`)
+    * windows: ?
 
 **Running into problems?**
 
@@ -50,7 +52,19 @@ First, install the python packages needed for the next two steps (`make install`
 pip install -r requirements.txt
 ```
 
-### 1.4 Create a CLDF version of your corpus
+### 1.4 Set up the glottolog catalog
+
+If you want to follow this tutorial to the letter, you will need to download the glottolog catalog with `cldfbench` so that language metadata can be looked up.
+To do so, run the following command and say `y` to installing the glottolog catalog (`make glottolog`).
+`cldfbench` will tell you where the catalog is stored so you can delete it if you don't want to keep it.
+
+```shell
+cldfbench catconfig
+```
+
+Alternatively, you can provide a `languages.csv` file to `cldflex`.
+
+### 1.5 Create a CLDF version of your corpus
 Next, use `cldflex` to transform the contents of your `.flextext` and `.lift` files to a CLDF dataset (`make cldflex`):[^1]
 
 ```shell
@@ -59,7 +73,7 @@ Next, use `cldflex` to transform the contents of your `.flextext` and `.lift` fi
 
 Note that you can also create a CLDF dataset in some other way, e.g. by using [`cldfbench`](https://cldfbench.readthedocs.io), or you can work with an existing dataset.
 
-### 1.5 Create a pylingdocs project based on that CLDF dataset
+### 1.6 Create a pylingdocs project based on that CLDF dataset
 1. create a pylingdocs project (the Makefile looks for an ID ending in `grammar`!)
 
 ```shell
@@ -74,7 +88,7 @@ You will be asked some setup prompts.
 cd your-grammar; pylingdocs cldf
 ```
 
-### 1.6 Set up a CLLD app
+### 1.7 Set up a CLLD app
 1. fork, clone or download [this repo](https://github.com/fmatter/indicogram/) into this folder and install it (`make indicogram`):
 
 
