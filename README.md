@@ -1,4 +1,4 @@
-** NOTE: don't try this at the moment, things are in flux **
+**NOTE: don't try this at the moment, things are in flux**
 
 # How to use your FLEx database to create a digital grammar
 
