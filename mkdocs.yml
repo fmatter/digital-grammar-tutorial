@@ -13,7 +13,7 @@ extra:
 theme:
   name: material
   icon:
-    logo: octicons/book-24
+    logo: material/monitor-edit
   features:
   - navigation.tabs
   - navigation.tabs.sticky
@@ -25,18 +25,20 @@ theme:
   - toc.integrate
   - content.code.copy
   palette:
-  - scheme: default
-    primary: yellow
-    accent: cyan
-    toggle:
-      icon: material/brightness-7
-      name: Switch to dark mode
-  - scheme: slate
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
     primary: yellow
     accent: cyan
     toggle:
       icon: material/brightness-4
       name: Switch to light markdown_extensions
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    primary: yellow
+    accent: cyan
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
 markdown_extensions:
 - toc:
     baselevel: 1
