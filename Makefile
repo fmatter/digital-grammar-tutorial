@@ -40,12 +40,12 @@ clld:
 	cd indicogram; clld initdb development.ini --cldf ../$(CLLD_GRAMMAR)/output/cldf/metadata.json; pserve --reload development.ini # set up CLLD database from CLDF datataset, run app
 
 release:
-	bump2version release --commit --tag
-	git checkout main
-	git merge writing
 	python release.py
 	git add site
 	-git commit -m "build"
+	bump2version release --commit --tag
+	git checkout main
+	git merge writing
 	git push; git push --tags
 	python deploy.py --release
 	git add site
