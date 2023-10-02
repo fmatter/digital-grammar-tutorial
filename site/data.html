@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://fl.mt/digital-grammar-tutorial/index.html">
+        <link rel="canonical" href="https://fl.mt/digital-grammar-tutorial/data.html">
       
       
+        <link rel="prev" href="start.html">
       
-        <link rel="next" href="start.html">
+      
+        <link rel="next" href="pld.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>Hands-on digital grammaticography</title>
+        <title>Creating a CLDF dataset - Hands-on digital grammaticography</title>
       
     
     
@@ -77,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hands-on-digital-grammaticography" class="md-skip">
+        <a href="#creating-a-cldf-dataset" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Creating a CLDF dataset
             
           </span>
         </div>
@@ -213,10 +215,8 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
+    <li class="md-tabs__item">
       <a href="index.html" class="md-tabs__link">
         
   
@@ -249,8 +249,10 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
+  
+    <li class="md-tabs__item md-tabs__item--active">
       <a href="data.html" class="md-tabs__link">
         
   
@@ -371,29 +373,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -402,40 +384,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    Next steps
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#problems" class="md-nav__link">
-    Problems?
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -463,9 +411,29 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="data.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Creating a CLDF dataset
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="data.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -474,6 +442,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flex" class="md-nav__link">
+    FLEx
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#box" class="md-nav__link">
+    *box
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -553,34 +555,39 @@
   
 
 
-<h1 id="hands-on-digital-grammaticography">Hands-on digital grammaticography</h1>
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="License: CC BY-SA 4.0" src="https://img.shields.io/badge/CC_BY--SA_4.0-F4EF63" /></a>
-<img alt="Version: 0.0.3-draft" src="https://img.shields.io/badge/v0.0.3-draft-F4EF63" /></p>
-<p>This is a guide with specific steps on how to create a digital grammar.
-The proposed method uses the <a href="https://cldf.clld.org/">CLDF</a>/<a href="https://clld.org/">CLLD</a> ecosystem to combine a linguistic database with a document written in <a href="https://www.markdownguide.org/">markdown</a>.
-It uses software specifically developed for this approach, as well as a set of <a href="https://github.com/fmatter/cldf-ldd/tree/main">CLDF components</a>.
-As such, it is opinionated in its choice of tools; however, the formatted output is <a href="https://fl.mt/pylingdocs/extending/">customizable</a>.
-In principle, the same method could be applied to other types of linguistic databases, provided that tooling for integrating data into schematic templates is available for these databases.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<h2 id="next-steps">Next steps</h2>
+<h1 id="creating-a-cldf-dataset">Creating a CLDF dataset</h1>
+<p><a href="https://cldf.clld.org/">CLDF</a> is a lightweight, human-readable format for linguistic data, using linked data in CSV files.
+The <a href="https://github.com/cldf/cldfviz/blob/main/docs/text.md"><code>cldfviz</code></a> library offers the possibility to intersperse markdown with data.
+<a href="https://github.com/fmatter/cldf-ldd">cldf-ldd</a> is a set of cldf components designed to encode fieldwork data, used by both conversion libraries below.</p>
+<ul>
+<li>if you have a FLEx database, <a href="#flex">click here</a></li>
+<li>if you have a <a href="https://software.sil.org/shoebox/">shoebox</a> or <a href="https://software.sil.org/toolbox/">toolbox</a> database, <a href="#box">click here</a></li>
+<li>if you don't have a database, the <code>cldflex</code> repo contains example <a href="https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.flextext">flextext</a> and <a href="https://github.com/fmatter/cldflex/blob/main/tests/data/apalai.lift">lift</a> files that you can use.</li>
+<li>you can also use some <a href="https://github.com/orgs/cldf-datasets/repositories">other existing CLDF dataset</a> to go through the workflow</li>
+</ul>
+<h2 id="flex">FLEx</h2>
+<p>The <a href="https://fl.mt/cldflex">cldflex</a> library can be used to convert FLEx databases into CSV files (and from there into CLDF datasets, if desired).
+To get your corpus &amp; lexicon ready for grammar writing, follow these steps:</p>
 <ol>
-<li>make sure you have <a href="/start">the necessary setup</a></li>
-<li>acquire <a href="/data">a CLDF dataset</a></li>
-<li><a href="/pld">write</a> a description</li>
+<li>export your FLEx text database as <code>.flextext</code>: Navigate to <code>Text &amp; Words &gt; Interlinear Texts</code>, open the <code>Analyzed</code> tab, use the menu <code>File &gt; Export Interlinear...</code> and choose the first option ("ELAN, SayMore, FLEx"). You can include one or multiple texts.</li>
+<li>export your FLEx lexicon as <code>.lift</code>: Navigate to <code>Lexicon</code>, use the menu <code>File &gt; Export...</code> and choose the option "Full Lexicon (LIFT 0.13 XML)".</li>
+<li>use <code>cldflex</code> to transform the contents of your <code>.flextext</code> and <code>.lift</code> files to a CLDF dataset:
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="sb">`</span>cldflex<span class="w"> </span>flex2csv<span class="w"> </span>&lt;filename&gt;.flextext<span class="w"> </span>--lexicon<span class="w"> </span>&lt;filename&gt;.lift<span class="w"> </span>--cldf<span class="sb">`</span>
+</span></code></pre></div>
+Depending on the setup of your FLEx database, this will throw all sorts of warnings at you and complain about inconsistencies. You can fix them in your database, but things should mostly work even if you ignore them. If you think a particular warning is inaccurate, open an issue <a href="https://github.com/fmatter/cldflex/issues/new">here</a>.</li>
+<li><a href="/pld">get writing</a></li>
 </ol>
-<h2 id="problems">Problems?</h2>
+<h2 id="box">*box</h2>
+<p>The <a href="https://fl.mt/unboxer">unboxer</a> is a tool to convert shoe- and toolbox databases into CSV files (and from there into CLDF datasets, if desired).
+To get your corpus &amp; lexicon ready for grammar writing, follow these steps:</p>
 <ol>
-<li>please check first if your case is covered in the <a href="/faq#common-problems">common problems</a></li>
-<li>if it's clear that the error comes from one of the used python packages, click the respective link (<a href="https://github.com/fmatter/cldflex/issues/new">cldflex</a>, <a href="https://github.com/fmatter/unboxer/issues/new">unboxer</a>, <a href="https://github.com/fmatter/pylingdocs/issues/new">pylingdocs</a>, <a href="https://github.com/fmatter/indicogram/issues/new">indicogram</a>) to create an issue</li>
-<li><a href="https://github.com/fmatter/digital-grammar-tutorial/issues/new">describe your issue here</a></li>
+<li>identify the path to your corpus database</li>
+<li>identify the path to your lexicon</li>
+<li>(optional) identify the path to your parsing database</li>
+<li>run this command, inserting the paths:</li>
 </ol>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>If you are interested in using a specific database format, <a href="mailto:fmatter@mailbox.org">get in touch</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>unboxer<span class="w"> </span>corpus<span class="w"> </span>&lt;/path/to/corpus.db&gt;<span class="w"> </span>--lexicon<span class="w"> </span>&lt;/path/to/lexicon.db&gt;<span class="w"> </span>--parsing<span class="w"> </span>&lt;/path/to/parse.db&gt;<span class="w"> </span>--cldf
+</span></code></pre></div>
 
   <hr>
 <div class="md-source-file">

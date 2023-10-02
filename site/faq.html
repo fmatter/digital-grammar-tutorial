@@ -8,11 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://fl.mt/digital-grammar-tutorial/index.html">
+        <link rel="canonical" href="https://fl.mt/digital-grammar-tutorial/faq.html">
       
       
+        <link rel="prev" href="deploy.html">
       
-        <link rel="next" href="start.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Hands-on digital grammaticography</title>
+        <title>FAQ - Hands-on digital grammaticography</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hands-on-digital-grammaticography" class="md-skip">
+        <a href="#faq" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              FAQ
             
           </span>
         </div>
@@ -213,10 +213,8 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
+    <li class="md-tabs__item">
       <a href="index.html" class="md-tabs__link">
         
   
@@ -300,8 +298,10 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
+  
+    <li class="md-tabs__item md-tabs__item--active">
       <a href="faq.html" class="md-tabs__link">
         
   
@@ -371,29 +371,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -402,40 +382,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    Next steps
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#problems" class="md-nav__link">
-    Problems?
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -520,9 +466,29 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="faq.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="faq.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -531,6 +497,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-problems" class="md-nav__link">
+    Common problems
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -553,34 +546,8 @@
   
 
 
-<h1 id="hands-on-digital-grammaticography">Hands-on digital grammaticography</h1>
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="License: CC BY-SA 4.0" src="https://img.shields.io/badge/CC_BY--SA_4.0-F4EF63" /></a>
-<img alt="Version: 0.0.3-draft" src="https://img.shields.io/badge/v0.0.3-draft-F4EF63" /></p>
-<p>This is a guide with specific steps on how to create a digital grammar.
-The proposed method uses the <a href="https://cldf.clld.org/">CLDF</a>/<a href="https://clld.org/">CLLD</a> ecosystem to combine a linguistic database with a document written in <a href="https://www.markdownguide.org/">markdown</a>.
-It uses software specifically developed for this approach, as well as a set of <a href="https://github.com/fmatter/cldf-ldd/tree/main">CLDF components</a>.
-As such, it is opinionated in its choice of tools; however, the formatted output is <a href="https://fl.mt/pylingdocs/extending/">customizable</a>.
-In principle, the same method could be applied to other types of linguistic databases, provided that tooling for integrating data into schematic templates is available for these databases.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<h2 id="next-steps">Next steps</h2>
-<ol>
-<li>make sure you have <a href="/start">the necessary setup</a></li>
-<li>acquire <a href="/data">a CLDF dataset</a></li>
-<li><a href="/pld">write</a> a description</li>
-</ol>
-<h2 id="problems">Problems?</h2>
-<ol>
-<li>please check first if your case is covered in the <a href="/faq#common-problems">common problems</a></li>
-<li>if it's clear that the error comes from one of the used python packages, click the respective link (<a href="https://github.com/fmatter/cldflex/issues/new">cldflex</a>, <a href="https://github.com/fmatter/unboxer/issues/new">unboxer</a>, <a href="https://github.com/fmatter/pylingdocs/issues/new">pylingdocs</a>, <a href="https://github.com/fmatter/indicogram/issues/new">indicogram</a>) to create an issue</li>
-<li><a href="https://github.com/fmatter/digital-grammar-tutorial/issues/new">describe your issue here</a></li>
-</ol>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>If you are interested in using a specific database format, <a href="mailto:fmatter@mailbox.org">get in touch</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+<h1 id="faq">FAQ</h1>
+<h2 id="common-problems">Common problems</h2>
 
   <hr>
 <div class="md-source-file">
