@@ -15,14 +15,14 @@ theme:
   icon:
     logo: octicons/book-24
   features:
-    - navigation.tabs
+    # - navigation.tabs
     - navigation.tabs.sticky
     - navigation.instant
     - navigation.tracking
     - navigation.top
     - navigation.expand
     - toc.follow
-    - toc.integrate
+    # - toc.integrate
     - content.code.copy
   palette:     
     # Palette toggle for light mode
