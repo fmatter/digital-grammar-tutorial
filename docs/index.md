@@ -1,7 +1,7 @@
 # Hands-on digital grammaticography
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/CC_BY--SA_4.0-F4EF63)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version: 0.0.6](https://img.shields.io/badge/v0.0.6-F4EF63)
+![Version: 0.0.7](https://img.shields.io/badge/v0.0.7-F4EF63)
 
 This is a guide with specific steps on how to create a digital grammar.
 The proposed method uses the [CLDF](https://cldf.clld.org/)/[CLLD](https://clld.org/) ecosystem to combine a linguistic database with a document written in [markdown](https://www.markdownguide.org/).
