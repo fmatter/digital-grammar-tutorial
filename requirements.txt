@@ -1,6 +1,0 @@
-cldflex[extras]
-cldfbench[glottolog,concepticon,clts]
-cldfviz == 0.9.0
-pylingdocs
-clld-morphology-plugin
-clld-corpus-plugin
