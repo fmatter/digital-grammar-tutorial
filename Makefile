@@ -44,7 +44,7 @@ release:
 	bump2version release --commit --tag
 	git checkout main
 	git merge writing
-	make deploy
+	python deploy.py --release
 	git push; git push --tags
 	git checkout writing
 	bump2version patch --commit --message "bump"
