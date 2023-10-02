@@ -12,11 +12,11 @@ jobs:
       uses: thedoctor0/zip-release@0.7.1
       with:
         type: 'zip'
-        filename: 'release.zip'
+        filename: 'docs.zip'
         exclusions: '*.git* .bumpversion.cfg Makefile mkdocs.yml'
-        path: site docs
+        path: site
     - name: Upload Release
       uses: ncipollo/release-action@v1.12.0
       with:
-        artifacts: "release.zip"
+        artifacts: "docs.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
