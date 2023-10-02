@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://fl.mt/digital-grammar-tutorial/latest/</loc>
+         <loc>https://fl.mt/digital-grammar-tutorial/index.html</loc>
          <lastmod>2023-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://fl.mt/digital-grammar-tutorial/latest/data/</loc>
+         <loc>https://fl.mt/digital-grammar-tutorial/data.html</loc>
          <lastmod>2023-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://fl.mt/digital-grammar-tutorial/latest/deploy/</loc>
+         <loc>https://fl.mt/digital-grammar-tutorial/deploy.html</loc>
          <lastmod>2023-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://fl.mt/digital-grammar-tutorial/latest/faq/</loc>
+         <loc>https://fl.mt/digital-grammar-tutorial/faq.html</loc>
          <lastmod>2023-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://fl.mt/digital-grammar-tutorial/latest/pld/</loc>
+         <loc>https://fl.mt/digital-grammar-tutorial/pld.html</loc>
          <lastmod>2023-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://fl.mt/digital-grammar-tutorial/latest/start/</loc>
+         <loc>https://fl.mt/digital-grammar-tutorial/start.html</loc>
          <lastmod>2023-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
