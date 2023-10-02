@@ -10,7 +10,7 @@ nav:
 extra:
   version:
     provider: mike
-    default: latest 
+    default: latest
 theme:
   name: material
   icon:
