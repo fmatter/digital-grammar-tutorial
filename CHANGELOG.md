@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.4-draft] - 2023-10-02
+
 ### Added
 - mkdocs deployment
 
@@ -27,7 +29,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.1] - 2022-11-24
 Initial release.
 
-[Unreleased]: https://github.com/fmatter/digital-grammar-tutorial/compare/v0.0.3...writing
+[Unreleased]: https://github.com/fmatter/digital-grammar-tutorial/compare/v0.0.4-draft...writing
+[0.0.4-draft]: https://github.com/fmatter/digital-grammar-tutorial/compare/v0.0.3...v0.0.4-draft
 [0.0.3]: https://github.com/fmatter/digital-grammar-tutorial/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/fmatter/digital-grammar-tutorial/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/fmatter/digital-grammar-tutorial/releases/tag/v0.0.1
