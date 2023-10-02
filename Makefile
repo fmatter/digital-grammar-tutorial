@@ -42,3 +42,4 @@ clld:
 release:
 	git commit -am "preparing for release"
 	bump2version patch --commit --tag
+	git push
