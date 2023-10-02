@@ -43,6 +43,7 @@ release:
 	git commit -am "preparing for release"
 	git checkout main
 	git merge writing
-	bump2version patch --commit --tag
-	git push
+	bump2version patch #--commit --tag
+	python release.py
+# 	git push
 	git checkout writing
