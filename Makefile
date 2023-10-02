@@ -48,6 +48,7 @@ release:
 	-git commit -m "build"
 	git push; git push --tags
 	python deploy.py --release
+	git add site
 	git commit -am "rebuild"
 	git checkout writing
 	git merge main
