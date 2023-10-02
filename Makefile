@@ -38,3 +38,7 @@ pylingdocs:
 
 clld:
 	cd indicogram; clld initdb development.ini --cldf ../$(CLLD_GRAMMAR)/output/cldf/metadata.json; pserve --reload development.ini # set up CLLD database from CLDF datataset, run app
+
+release:
+	git commit -am "preparing for release"
+	bump2version patch --commit --tag
