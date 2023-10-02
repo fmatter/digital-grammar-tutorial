@@ -41,12 +41,13 @@ clld:
 
 release:
 	git commit -am "preparing for release"
+	bump2version release  #--commit --tag
 	git checkout main
 	git merge writing
-	bump2version patch #--commit --tag
 	make deploy
-# 	git push
+	git push; git push --tags
 	git checkout writing
+	bump2version patch --commit --message "bump"
 
 deploy:
 	python deploy.py

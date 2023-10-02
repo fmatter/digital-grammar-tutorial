@@ -5,4 +5,29 @@
          <lastmod>2023-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://fl.mt/digital-grammar-tutorial/latest/data/</loc>
+         <lastmod>2023-10-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fl.mt/digital-grammar-tutorial/latest/deploy/</loc>
+         <lastmod>2023-10-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fl.mt/digital-grammar-tutorial/latest/faq/</loc>
+         <lastmod>2023-10-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fl.mt/digital-grammar-tutorial/latest/pld/</loc>
+         <lastmod>2023-10-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fl.mt/digital-grammar-tutorial/latest/start/</loc>
+         <lastmod>2023-10-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
