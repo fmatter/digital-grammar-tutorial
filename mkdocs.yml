@@ -1,0 +1,70 @@
+site_name: Hands-on digital grammaticography
+site_url: https://fl.mt/digital-grammar-tutorial/
+nav:
+  - Home: index.md
+  - start.md
+  - data.md
+  - pld.md  
+  - deploy.md
+  - faq.md
+extra:
+  version:
+    provider: mike
+theme:
+  name: material
+  icon:
+    logo: octicons/book-24
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.expand
+    - toc.follow
+    - toc.integrate
+    - content.code.copy
+  palette:     
+    # Palette toggle for light mode
+    - scheme: default
+      primary: yellow
+      accent: cyan
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: yellow
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light markdown_extensions
+markdown_extensions:
+  - toc:
+      baselevel: 1
+  - attr_list
+  - footnotes
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+plugins:
+    # - enumerate-headings:
+    #     toc_depth: 6
+    #     include:
+    #       - "*"
+    - search
+    - git-revision-date-localized
+    - mike:
+        # These fields are all optional; the defaults are as below...
+        canonical_version: latest
+        version_selector: true
+        css_dir: css
+        javascript_dir: js
+repo_url: https://github.com/fmatter/digital-grammar-tutorial
+repo_name: Source (GitHub)
