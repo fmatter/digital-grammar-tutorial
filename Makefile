@@ -46,8 +46,9 @@ release:
 	python release.py
 	git add site
 	-git commit -m "build"
-	python deploy.py --release
 	git push; git push --tags
+	python deploy.py --release
+	git commit -am "rebuild"
 	git checkout writing
 	git merge main
 	bump2version patch --commit --message "bump"
