@@ -14,7 +14,7 @@ jobs:
         type: 'zip'
         filename: 'release.zip'
         exclusions: '*.git* .bumpversion.cfg Makefile mkdocs.yml'
-        path: docs
+        path: site docs
     - name: Upload Release
       uses: ncipollo/release-action@v1.12.0
       with:
